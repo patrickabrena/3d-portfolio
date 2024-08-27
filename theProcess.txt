@@ -1,0 +1,194 @@
+1st, we need to initialize the app
+what it looks line from the terminal
+
+
+patrick@Patrick:~/repos/3d-portfolio$ npm create vite@latest ./ -- --template react
+Need to install the following packages:
+  create-vite@5.5.2
+Ok to proceed? (y) y
+npm WARN EBADENGINE Unsupported engine {
+npm WARN EBADENGINE   package: 'create-vite@5.5.2',
+npm WARN EBADENGINE   required: { node: '^18.0.0 || >=20.0.0' },
+npm WARN EBADENGINE   current: { node: 'v19.2.0', npm: '8.19.3' }
+npm WARN EBADENGINE }
+✔ Current directory is not empty. Please choose how to proceed: › Ignore files and continue
+
+Scaffolding project in /home/patrick/repos/3d-portfolio...
+
+Done. Now run:
+
+  npm install
+  npm run dev
+
+npm notice 
+npm notice New major version of npm available! 8.19.3 -> 10.8.2
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v10.8.2
+npm notice Run npm install -g npm@10.8.2 to update!
+npm notice 
+
+
+
+at this point, we need to get tailwind package before running npm install and npm dev
+
+
+Install tailwind using tailwind CLI 
+
+"npx tailwindcss init"
+
+next specify which depndency packages to Install. look at terminal command
+
+patrick@Patrick:~/repos/3d-portfolio$ npm install --legacy-peer-deps @react-three/fiber @react-three/drei maath react-vertical-timeline-component @emailjs/browser framer-motion react-router-dom
+
+Run sudo apt update
+
+Check the rest of this terminal command history to see what I did
+
+patrick@Patrick:~/repos/3d-portfolio$ sudo apt update
+[sudo] password for patrick: 
+Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Hit:2 https://deb.nodesource.com/node_19.x jammy InRelease                             
+Get:3 https://dl.google.com/linux/chrome/deb stable InRelease [1825 B]                 
+Hit:4 http://archive.ubuntu.com/ubuntu jammy InRelease                                 
+Get:5 http://archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]                
+Err:3 https://dl.google.com/linux/chrome/deb stable InRelease                          
+  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY E88979FB9B30ACF2
+Get:7 http://security.ubuntu.com/ubuntu jammy-security/main amd64 Packages [1769 kB]   
+Get:8 https://ppa.launchpadcontent.net/git-core/ppa/ubuntu jammy InRelease [24.6 kB]   
+Get:9 http://archive.ubuntu.com/ubuntu jammy-backports InRelease [127 kB]              
+Hit:6 https://packagecloud.io/ookla/speedtest-cli/ubuntu jammy InRelease               
+Get:10 http://security.ubuntu.com/ubuntu jammy-security/main Translation-en [290 kB]   
+Get:11 http://security.ubuntu.com/ubuntu jammy-security/main amd64 c-n-f Metadata [13.2 kB]
+Get:12 http://security.ubuntu.com/ubuntu jammy-security/restricted amd64 Packages [2308 kB]
+Get:13 http://security.ubuntu.com/ubuntu jammy-security/restricted Translation-en [398 kB]
+Get:14 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1987 kB]    
+Get:15 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 Packages [890 kB]
+Get:16 https://ppa.launchpadcontent.net/git-core/ppa/ubuntu jammy/main amd64 Packages [2828 B]
+Get:17 http://security.ubuntu.com/ubuntu jammy-security/universe Translation-en [175 kB]
+Get:18 http://security.ubuntu.com/ubuntu jammy-security/universe amd64 c-n-f Metadata [19.0 kB]
+Get:19 http://archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [349 kB]     
+Get:20 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 c-n-f Metadata [17.8 kB]
+Get:21 http://archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2384 kB]
+Get:22 http://archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [410 kB]
+Get:23 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 Packages [1112 kB]
+Get:24 http://archive.ubuntu.com/ubuntu jammy-updates/universe Translation-en [260 kB]
+Get:25 http://archive.ubuntu.com/ubuntu jammy-updates/universe amd64 c-n-f Metadata [26.0 kB]
+Get:26 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 Packages [43.3 kB]
+Get:27 http://archive.ubuntu.com/ubuntu jammy-updates/multiverse amd64 c-n-f Metadata [444 B]
+Get:28 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 Packages [67.8 kB]
+Get:29 http://archive.ubuntu.com/ubuntu jammy-backports/main Translation-en [11.1 kB]
+Get:30 http://archive.ubuntu.com/ubuntu jammy-backports/main amd64 c-n-f Metadata [388 B]
+Get:31 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 Packages [28.8 kB]
+Get:32 http://archive.ubuntu.com/ubuntu jammy-backports/universe Translation-en [16.5 kB]
+Get:33 http://archive.ubuntu.com/ubuntu jammy-backports/universe amd64 c-n-f Metadata [672 B]
+Fetched 13.0 MB in 2s (5549 kB/s)                              
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+244 packages can be upgraded. Run 'apt list --upgradable' to see them.
+W: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: https://dl.google.com/linux/chrome/deb stable InRelease: The following signatures couldn't be verified because the public key is not available: NO_PUBKEY E88979FB9B30ACF2
+W: Failed to fetch https://dl.google.com/linux/chrome/deb/dists/stable/InRelease  The following signatures couldn't be verified because the public key is not available: NO_PUBKEY E88979FB9B30ACF2
+W: Some index files failed to download. They have been ignored, or old ones used instead.
+patrick@Patrick:~/repos/3d-portfolio$ sudo apt install nodejs npm
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Some packages could not be installed. This may mean that you have
+requested an impossible situation or if you are using the unstable
+distribution that some required packages have not yet been created
+or been moved out of Incoming.
+The following information may help to resolve the situation:
+
+The following packages have unmet dependencies:
+ nodejs : Conflicts: npm
+ npm : Depends: node-cacache but it is not going to be installed
+       Depends: node-gyp but it is not going to be installed
+       Depends: node-mkdirp but it is not going to be installed
+       Depends: node-nopt but it is not going to be installed
+       Depends: node-tar but it is not going to be installed
+       Depends: node-which but it is not going to be installed
+       Depends: nodejs:any (>= 10)
+       Recommends: node-tap but it is not going to be installed
+E: Unable to correct problems, you have held broken packages.
+patrick@Patrick:~/repos/3d-portfolio$ node -v
+v19.2.0
+patrick@Patrick:~/repos/3d-portfolio$ curl -fsSL https://fnm.vercel.app/install | bash
+Checking dependencies for the installation script...
+Checking availability of curl... OK!
+Checking availability of unzip... Missing!
+Not installing fnm due to missing dependencies.
+patrick@Patrick:~/repos/3d-portfolio$ npm install -g npm@10.8.2
+npm ERR! code EBADENGINE
+npm ERR! engine Unsupported engine
+npm ERR! engine Not compatible with your version of node/npm: npm@10.8.2
+npm ERR! notsup Not compatible with your version of node/npm: npm@10.8.2
+npm ERR! notsup Required: {"node":"^18.17.0 || >=20.5.0"}
+npm ERR! notsup Actual:   {"npm":"8.19.3","node":"v19.2.0"}
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/patrick/.npm/_logs/2024-08-27T17_49_46_438Z-debug-0.log
+patrick@Patrick:~/repos/3d-portfolio$ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100 15916  100 15916    0     0  91875      0 --:--:-- --:--:-- --:--:-- 92000
+=> Downloading nvm from git to '/home/patrick/.nvm'
+=> Cloning into '/home/patrick/.nvm'...
+remote: Enumerating objects: 376, done.
+remote: Counting objects: 100% (376/376), done.
+remote: Compressing objects: 100% (322/322), done.
+remote: Total 376 (delta 45), reused 183 (delta 27), pack-reused 0 (from 0)
+Receiving objects: 100% (376/376), 381.38 KiB | 2.41 MiB/s, done.
+Resolving deltas: 100% (45/45), done.
+* (HEAD detached at FETCH_HEAD)
+  master
+=> Compressing and cleaning up git repository
+
+=> Appending nvm source string to /home/patrick/.bashrc
+=> Appending bash_completion source string to /home/patrick/.bashrc
+=> You currently have modules installed globally with `npm`. These will no
+=> longer be linked to the active version of Node when you install a new node
+=> with `nvm`; and they may (depending on how you construct your `$PATH`)
+=> override the binaries of modules installed with `nvm`:
+
+/usr/lib
+├── corepack@0.15.1
+=> If you wish to uninstall them at a later point (or re-install them under your
+=> `nvm` Nodes), you can remove them from the system Node as follows:
+
+     $ nvm use system
+     $ npm uninstall -g a_module
+
+=> Close and reopen your terminal to start using nvm or run the following to use it now:
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+patrick@Patrick:~/repos/3d-portfolio$ source ~/.bashrc
+patrick@Patrick:~/repos/3d-portfolio$ nvm install 20
+Downloading and installing node v20.17.0...
+Downloading https://nodejs.org/dist/v20.17.0/node-v20.17.0-linux-x64.tar.xz...
+################################################################################# 100.0%
+Computing checksum with sha256sum
+Checksums matched!
+Now using node v20.17.0 (npm v10.8.2)
+Creating default alias: default -> 20 (-> v20.17.0)
+patrick@Patrick:~/repos/3d-portfolio$ nvm install 18
+Downloading and installing node v18.20.4...
+Downloading https://nodejs.org/dist/v18.20.4/node-v18.20.4-linux-x64.tar.xz...
+################################################################################# 100.0%
+Computing checksum with sha256sum
+Checksums matched!
+Now using node v18.20.4 (npm v10.7.0)
+patrick@Patrick:~/repos/3d-portfolio$ nvm install 20
+v20.17.0 is already installed.
+Now using node v20.17.0 (npm v10.8.2)
+patrick@Patrick:~/repos/3d-portfolio$ npm install -g npm@10.8.2
+
+changed 13 packages in 3s
+
+22 packages are looking for funding
+  run `npm fund` for details
+patrick@Patrick:~/repos/3d-portfolio$ node -v
+npm -v
+v20.17.0
+10.8.2
+patrick@Patrick:~/repos/3d-portfolio$ 
