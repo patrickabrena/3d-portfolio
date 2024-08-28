@@ -216,3 +216,30 @@ new "public" file goes in 3d-portfolio directory
 assets and components go in src directory
 
 @14:10 in the video
+
+
+
+
+
+Next, we're going to modify the components directory by deleting the App.css file
+
+Go into App.jsx and delete the premade structure within return() and the const [count, setCount] = useState(0)
+
+switch to ES6 arrow function
+
+Go to github Gist in the diescription for some code snippets
+
+first take the index.css and replace it with the current index.css, this has gradients, and imported google font and tailwind base, components and utilities
+
+through terminal, cd in src and touch styles.js and copy from github gist styles.js
+
+after this, you want to update the tailwind.config.js with the github gist in the link
+
+inside the src folder again, mkdir utils and inside touch motion.js, copy the framer motion animation from github gist
+
+again within src, mkdir constants and populate with index.js and copy in the index.js from github gists
+this is where I can change my developer experience
+
+@17:30 in the video
+
+now run npm ruv dev
