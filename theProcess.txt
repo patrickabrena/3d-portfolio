@@ -43,6 +43,11 @@ Run sudo apt update
 
 Check the rest of this terminal command history to see what I did
 
+
+
+
+---------------------------------------------------------------------
+
 patrick@Patrick:~/repos/3d-portfolio$ sudo apt update
 [sudo] password for patrick: 
 Get:1 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
@@ -192,3 +197,22 @@ npm -v
 v20.17.0
 10.8.2
 patrick@Patrick:~/repos/3d-portfolio$ 
+
+
+---------------------------------------------------------------------
+
+
+
+
+
+currently at 12:35 in video
+
+downloading the public, assets, and components zip from google drive
+
+will be able to sub these out later with the things I make
+
+new "public" file goes in 3d-portfolio directory
+
+assets and components go in src directory
+
+@14:10 in the video
