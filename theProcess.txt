@@ -225,7 +225,7 @@ Next, we're going to modify the components directory by deleting the App.css fil
 
 Go into App.jsx and delete the premade structure within return() and the const [count, setCount] = useState(0)
 
-switch to ES6 arrow function
+switch to ES6 arrow function, also delete the import statements in the top of the App.jsx file
 
 Go to github Gist in the diescription for some code snippets
 
@@ -242,4 +242,32 @@ this is where I can change my developer experience
 
 @17:30 in the video
 
-now run npm ruv dev
+now run "npm ruv dev"
+open in broswer and see the website running on local host
+
+
+
+
+
+Now we need to import all the components that we just created into the App.jsx
+
+start by by using..... import { BrowserRouter } from "react-router-dom";
+
+now import the following components, {
+  About,
+  Contact,
+  Experience,
+  Feedbacks,
+  Hero,
+  Navbar,
+  Tech,
+  Works,
+  StarsCanvas,
+}
+
+Within App arrow function, clear everything within the return()
+start by creating BrowserRouter element and nesting a div with a className="relative z-0 bg-primary"
+
+Next within that div, create another div with className="bg-hero-pattern bg-cover bg-no-repeat bg-center"
+
+@19:40 of video
